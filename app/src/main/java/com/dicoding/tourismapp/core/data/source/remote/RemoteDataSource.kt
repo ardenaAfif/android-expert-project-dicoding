@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 @SuppressLint("CheckResult")
-class RemoteDataSource private constructor(private val apiService: ApiService) {
+class RemoteDataSource constructor(private val apiService: ApiService) {
     companion object {
         @Volatile
         private var instance: RemoteDataSource? = null
