@@ -9,18 +9,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import javax.inject.Inject
 
 @SuppressLint("CheckResult")
-class RemoteDataSource private constructor(private val apiService: ApiService) {
-    companion object {
-        @Volatile
-        private var instance: RemoteDataSource? = null
-
-        fun getInstance(service: ApiService): RemoteDataSource =
-            instance ?: synchronized(this) {
-                instance ?: RemoteDataSource(service)
-            }
-    }
+class RemoteDataSource @Inject constructor(private val apiService: ApiService) {
 
     fun getAllTourism(): Flow<ApiResponse<List<TourismResponse>>> {
 
