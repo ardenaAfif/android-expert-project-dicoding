@@ -6,9 +6,11 @@ import com.dicoding.tourismapp.core.data.source.local.room.TourismDao
 import com.dicoding.tourismapp.core.data.source.local.room.TourismDatabase
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
 import javax.inject.Singleton
 
 @Module
+@InstallIn(Singleton::class)
 class DatabaseModule {
 
     @Singleton
