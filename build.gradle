@@ -38,8 +38,8 @@ buildscript {
 
     repositories {
         google()
-        mavenCentral()
-        
+//        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.2.2'
@@ -53,8 +53,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()
-        
+//        mavenCentral()
+        jcenter()
     }
 }
 
